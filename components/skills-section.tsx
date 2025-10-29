@@ -1,5 +1,8 @@
 import { Card } from "@/components/ui/card"
-import { Code2, Database, Lock, Smartphone, Globe, Server, Sparkles } from "lucide-react"
+import { 
+  Code2, Database, Lock, Smartphone, Globe, Server, Sparkles,
+  Shield, TerminalSquare, Wrench, Network, Bug, Layers, GitBranch, Github
+} from "lucide-react"
 
 const skills = [
   {
@@ -21,22 +24,70 @@ const skills = [
     color: "from-blue-500 to-cyan-500",
   },
   {
+    icon: Layers,
+    title: "Next.js",
+    description: "Full-stack web applications using Next.js and modern web practices",
+    color: "from-indigo-500 to-blue-500",
+  },
+  {
     icon: Database,
     title: "Supabase",
     description: "Database management and real-time applications",
     color: "from-emerald-500 to-teal-500",
   },
   {
-    icon: Lock,
-    title: "Cybersecurity",
-    description: "Security best practices and vulnerability assessment",
-    color: "from-red-500 to-pink-500",
+    icon: Wrench,
+    title: "DevOps",
+    description: "Automation, CI/CD pipelines, and infrastructure management",
+    color: "from-yellow-500 to-orange-500",
+  },
+  {
+    icon: TerminalSquare,
+    title: "Docker & Kubernetes",
+    description: "Containerization, orchestration, and cloud-native deployment",
+    color: "from-sky-500 to-blue-600",
+  },
+  {
+    icon: Network,
+    title: "Network Configuration",
+    description: "Configuring routers, switches, and securing network infrastructure",
+    color: "from-cyan-500 to-sky-500",
+  },
+  {
+    icon: Bug,
+    title: "Penetration Testing",
+    description: "Identifying and exploiting security flaws in applications and networks",
+    color: "from-red-500 to-rose-500",
+  },
+  {
+    icon: Shield,
+    title: "Web Security Testing",
+    description: "Assessing web applications for vulnerabilities and security risks",
+    color: "from-pink-500 to-purple-500",
+  },
+  {
+    icon: GitBranch,
+    title: "Git",
+    description: "Version control and collaboration for efficient code management",
+    color: "from-orange-500 to-yellow-500",
+  },
+  {
+    icon: Github,
+    title: "GitHub",
+    description: "Code hosting, collaboration, and project version management",
+    color: "from-gray-600 to-black",
   },
   {
     icon: Globe,
     title: "API Development",
     description: "RESTful APIs and GraphQL implementation",
     color: "from-purple-500 to-indigo-500",
+  },
+  {
+    icon: Lock,
+    title: "Cybersecurity",
+    description: "Security best practices and vulnerability assessment",
+    color: "from-red-500 to-pink-500",
   },
 ]
 
@@ -80,20 +131,15 @@ export function SkillsSection() {
             <Card
               key={index}
               className="relative p-6 bg-background/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 group overflow-hidden hover:-translate-y-2"
-              style={{ 
-                animationDelay: `${index * 100}ms`,
-              }}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Gradient glow effect on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
               
-              {/* Animated border gradient */}
               <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className={`absolute inset-[-1px] bg-gradient-to-br ${skill.color} rounded-lg blur-sm`} />
               </div>
 
               <div className="relative z-10">
-                {/* Icon container with gradient */}
                 <div className="mb-4 inline-flex relative group/icon">
                   <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} rounded-xl blur-md opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
                   <div className="relative p-3 bg-background/80 backdrop-blur-sm rounded-xl border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110">
@@ -109,19 +155,16 @@ export function SkillsSection() {
                   {skill.description}
                 </p>
 
-                {/* Decorative corner element */}
                 <div className="absolute top-4 right-4 w-20 h-20 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
                   <div className={`w-full h-full bg-gradient-to-br ${skill.color} rounded-full blur-2xl`} />
                 </div>
               </div>
 
-              {/* Bottom shine effect */}
               <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Card>
           ))}
         </div>
 
-        {/* Additional info or CTA */}
         <div className="mt-16 text-center">
           <p className="text-sm text-muted-foreground">
             And always learning more... 🚀

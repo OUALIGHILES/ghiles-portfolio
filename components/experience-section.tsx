@@ -4,7 +4,7 @@ import { GraduationCap, Briefcase, Sparkles, Calendar } from "lucide-react"
 const experiences = [
   {
     type: "education",
-    title: "Computer Science Engineering",
+    title: "Cybersecurity Engineering",
     organization: "ESTIN",
     period: "2023 - Present",
     description:
@@ -17,6 +17,22 @@ const experiences = [
     period: "Summer 2024",
     description:
       "Conducted comprehensive testing of web applications, identified security vulnerabilities, and collaborated with development teams to implement fixes.",
+  },
+  {
+    type: "work",
+    title: "Network Configuration Intern",
+    organization: "Port of Béjaïa",
+    period: "Summer 2023",
+    description:
+      "Configured and managed Fortigate firewalls, optimized network routing and security policies, and assisted in maintaining the overall network infrastructure.",
+  },
+  {
+    type: "work",
+    title: "Freelance Web Developer",
+    organization: "Self-Employed",
+    period: "2022 - Present",
+    description:
+      "Completed over 15 freelance projects for clients worldwide — including portfolio websites, e-commerce platforms, and web security audits — using modern technologies like Next.js, Django, and Tailwind CSS.",
   },
 ]
 
@@ -64,9 +80,7 @@ export function ExperienceSection() {
                 <div 
                   key={index} 
                   className="relative pl-20 group"
-                  style={{ 
-                    animationDelay: `${index * 200}ms`,
-                  }}
+                  style={{ animationDelay: `${index * 200}ms` }}
                 >
                   {/* Enhanced Timeline dot with glow */}
                   <div className="absolute left-4 top-8 z-10">

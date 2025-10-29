@@ -11,8 +11,8 @@ const projects = [
       "Full-stack e-commerce solution with React, Django, and Stripe integration. Features include user authentication, product management, and secure payment processing.",
     image: "/modern-ecommerce-dashboard.png",
     tags: ["React", "Django", "PostgreSQL", "Stripe"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    github: "https://github.com/OUALIGHILES/ARVEA",
+    demo: "https://arvea.vercel.app/",
   },
   {
     title: "Give Me Delivery",
