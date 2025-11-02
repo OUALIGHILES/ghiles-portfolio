@@ -24,13 +24,13 @@ const projects = [
     demo: "https://giveemee.com/",
   },
   {
-    title: "Task Management App",
+    title: "CodeCraft Hackathon — 1st Place Winner",
     description:
-      "Real-time collaborative task management application with Supabase backend. Features include team collaboration, notifications, and progress tracking.",
+     " Won 1st place in the national CodeCraft hackathon organized by BytCraft, competing against top teams from universities across Algeria. Demonstrated strong problem-solving, algorithmic thinking, and team collaboration under time pressure." ,
     image: "/task-management-app.png",
-    tags: ["Next.js", "Supabase", "TypeScript", "Tailwind"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    tags: ["Competitive Programming", "Algorithms", "Hackathon", "Collaboration", "C++"],
+    github: null,
+    demo: null,
   },
   {
     title: "iOS Fitness Tracker",
@@ -40,6 +40,16 @@ const projects = [
     tags: ["Swift", "SwiftUI", "HealthKit", "CoreData"],
     github: "https://github.com",
     demo: null,
+  },
+
+   {
+    title: "Oracle DevOps Professional Training",
+    description:
+      "Comprehensive Oracle Cloud Infrastructure (OCI) DevOps training program covering CI/CD pipelines, automation, container orchestration, and cloud security. Included hands-on labs for deploying scalable cloud applications using OCI services.",
+    image: "/eCertificate-1.png",
+    tags: ["Oracle Cloud", "DevOps", "CI/CD", "Cloud Security"],
+    github: "https://github.com/OUALIGHILES/ARVEA",
+    demo: "https://arvea.vercel.app/",
   },
 ]
 
@@ -84,23 +94,27 @@ export function ProjectsSection() {
                   ))}
                 </div>
 
-                <div className="flex gap-3">
-                  <Button asChild variant="outline" size="sm" className="group/btn bg-transparent">
-                    <Link href={project.github} target="_blank">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                      <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover/btn:opacity-100 transition-opacity" />
-                    </Link>
-                  </Button>
-                  {project.demo && (
-                    <Button asChild size="sm" className="group/btn">
-                      <Link href={project.demo} target="_blank">
-                        Live Demo
-                        <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
-                      </Link>
-                    </Button>
-                  )}
-                </div>
+                {(project.github || project.demo) && (
+                  <div className="flex gap-3">
+                    {project.github && (
+                      <Button asChild variant="outline" size="sm" className="group/btn bg-transparent">
+                        <Link href={project.github} target="_blank">
+                          <Github className="mr-2 h-4 w-4" />
+                          Code
+                          <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover/btn:opacity-100 transition-opacity" />
+                        </Link>
+                      </Button>
+                    )}
+                    {project.demo && (
+                      <Button asChild size="sm" className="group/btn">
+                        <Link href={project.demo} target="_blank">
+                          Live Demo
+                          <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                        </Link>
+                      </Button>
+                    )}
+                  </div>
+                )}
               </div>
             </Card>
           ))}

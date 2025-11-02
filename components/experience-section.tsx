@@ -11,6 +11,14 @@ const experiences = [
       "Specialized in cybersecurity. Coursework includes advanced algorithms, network security, and full-stack development.",
   },
   {
+    type: "education",
+    title: "Oracle Cloud DevOps Professional Certification",
+    organization: "Oracle University",
+    period: "2025",
+    description:
+      "Achieved the Oracle Cloud DevOps Professional certification, covering advanced topics in CI/CD pipelines, automation, container orchestration, and secure cloud infrastructure management within OCI. Gained hands-on experience with Terraform, Docker, and Oracle Cloud services.",
+  },
+  {
     type: "work",
     title: "Web Testing Intern",
     organization: "Sonatrach",
@@ -35,6 +43,7 @@ const experiences = [
       "Completed over 15 freelance projects for clients worldwide — including portfolio websites, e-commerce platforms, and web security audits — using modern technologies like Next.js, Django, and Tailwind CSS.",
   },
 ]
+
 
 export function ExperienceSection() {
   return (

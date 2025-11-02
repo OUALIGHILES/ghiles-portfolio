@@ -26,11 +26,15 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Profile image with glow effect */}
+          {/* Oracle Badge with glow effect */}
           <div className="mb-8 inline-block relative group">
             <div className="absolute -inset-2 bg-gradient-to-r from-primary via-purple-500 to-primary rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 animate-pulse" />
-            <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-primary via-purple-500 to-primary flex items-center justify-center text-4xl font-bold border-4 border-background shadow-2xl group-hover:scale-110 transition-transform duration-500">
-              GO
+            <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-primary via-purple-500 to-primary flex items-center justify-center border-4 border-background shadow-2xl overflow-hidden group-hover:scale-110 transition-transform duration-500">
+              <img
+                src="/oracle-badge.jpg"
+                alt="Oracle Certified Professional"
+                className="w-full h-full object-cover rounded-full"
+              />
               <Sparkles className="absolute -top-2 -right-2 w-6 h-6 text-primary animate-pulse" />
             </div>
           </div>
@@ -76,7 +80,7 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Social links with hover effects */}
+          {/* Social links */}
           <div className="flex items-center justify-center gap-4">
             <Link
               href="https://github.com"
